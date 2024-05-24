@@ -15,12 +15,12 @@ services:
       RUNDECK_DATABASE_USERNAME: rundeck
       RUNDECK_DATABASE_PASSWORD: rundeck
       RUNDECK_DATABASE_URL: jdbc:postgresql://postgres/rundeck?autoReconnect=true&useSSL=false&allowPublicKeyRetrieval=true
-      RUNDECK_GRAILS_URL: http://127.0.0.1:4440/
+      RUNDECK_GRAILS_URL: http://65.1.224.148:4440/
       RUNDECK_SERVER_ADDRESS: 0.0.0.0
     volumes:
       - rundeck_data:/home/rundeck/server
-      - /Users/binayadai/Documents/project/minor/rundeck/data:/opt
-      - /Users/binayadai/.ssh:/home/rundeck/.ssh
+      - /home/ubuntu/autorecovery-rundeck-ansible-project/data:/opt
+      - /home/ubuntu/.ssh:/home/rundeck/.ssh
     ports:
       - 4440:4440
     restart: always

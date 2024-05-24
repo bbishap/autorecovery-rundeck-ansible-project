@@ -1,5 +1,4 @@
----
-- hosts: testing_server
+- hosts: all
   connection: local
   tasks:
     - name: Stop EC2 instance
